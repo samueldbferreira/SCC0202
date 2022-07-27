@@ -13,7 +13,7 @@ int main() {
     }
 
     printf("\n\npopping: \n");
-    while (!isEmpty(s)) {
+    while (size(s) > 0) {
         pop(&aux, s);
         printf("%d ", aux);
     }

@@ -1,13 +1,11 @@
-typedef struct {
-    int size;
-    int* items;
-} Stack_t;
+typedef struct node Node_t;
+typedef struct stack Stack_t;
 
 Stack_t* createStack();
 
-int push(int x, Stack_t* s);
+int size(Stack_t* s);
 
-int isEmpty(Stack_t* s);
+int push(int x, Stack_t* s);
 
 int pop(int* x, Stack_t* s);
 
