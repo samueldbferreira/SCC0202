@@ -87,7 +87,6 @@ int delete (int x, List_t* l) {
                 prev->next = aux->next;
 
             }
-
             free(aux);
 
             l->size--;
