@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "stack.h"
 
-int main() {
+int main () {
     Stack_t* s = createStack();
 
     printf("pushing: \n");
