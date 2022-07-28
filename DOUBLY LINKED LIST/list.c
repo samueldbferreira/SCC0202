@@ -104,7 +104,6 @@ int delete (int x, List_t* l) {
         if (n->prev == NULL && n->next == NULL) {
             l->first = NULL;
             l->last = NULL;
-            free(n);
 
         } else {
             if (n == l->first) {
@@ -120,9 +119,9 @@ int delete (int x, List_t* l) {
                 n->next->prev = n->prev;
 
             }
-            free(n);
 
         }
+        free(n);
         l->size--;
 
         return 1;
