@@ -1,29 +1,37 @@
 #include <stdio.h>
-#include "tree.h"
+#include "bst.h"
 
 int main () {
     Tree_t* t = createTree();
 
-    insert(5, t);
-    insert(3, t);
-    insert(7, t);
-    insert(9, t);
-    insert(8, t);
-    insert(2, t);
-    printTree(t);
+    printf("empty? %d\n\n", isEmpty(t));
 
-    printf("5 -> %d\n\n",inTree(5, t));
+    insert(8, t);
+    insert(3, t);
+    insert(13, t);
+    insert(1, t);
+    insert(7, t);
+    insert(10, t);
+    insert(14, t);
+    insert(4, t);
+    insert(12, t);
+    insert(5, t);
+
+    printTree(t);
+    printf("13 in tree? -> %d\n\n", inTree(13, t));
+
+    printf("empty? %d\n\n", isEmpty(t));
 
     int temp;
-    maxValue(&temp, t);
-    printf("max: %d\n", temp);
     minValue(&temp, t);
-    printf("min: %d\n\n", temp);;
+    printf("min: %d\n", temp);
+    maxValue(&temp, t);
+    printf("max: %d\n\n", temp);
 
-    delete(5, t);
+    delete(13, t);
     printTree(t);
 
-    printf("5 -> %d\n",inTree(5, t));
+    printf("13 in tree? -> %d\n\n", inTree(13, t));
 
     destroyTree(t);
 
